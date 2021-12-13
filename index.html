@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự Kiện Bàn Phím</title>
+</head>
+<body onload="kq()">
+<img id="a" style="width: 10% ; position: absolute ; left: 0 ; right: 0 ; top: 0 ; width: 10%"
+     src="https://cdn-aooek.nitrocdn.com/jADLkKldCLyvbzneZqCzAXMpXrnxnSeV/assets/static/optimized/rev-fe9ac44/originals/48/15/b6/4815b63434fdfb0ee2231dc27b98a4c0.png"
+     alt="">
+
+<script>
+
+    let img ;
+
+
+    function up() {
+        img = document.getElementById('a');
+        img.style.top = parseInt(img.style.top) - 10 + 'px'
+    }
+
+    function down() {
+        img = document.getElementById('a');
+        img.style.top = parseInt(img.style.top) + 10 + 'px'
+    }
+
+    function right() {
+       img = document.getElementById('a');
+        img.style.left = parseInt(img.style.left) + 10 + 'px'
+    }
+
+    function left() {
+        img = document.getElementById('a');
+        img.style.left = parseInt(img.style.left) - 10 + 'px'
+    }
+
+    function move(abc) {
+        switch (abc.keyCode){
+            case 38:
+                up()
+                break;
+            case 40:
+                down()
+                break;
+            case 37:
+                left()
+                break;
+            case 39:
+                right()
+                break;}
+    }
+
+    function kq() {
+        window.addEventListener('keydown', move)
+    }
+</script>
+
+</body>
+</html>
